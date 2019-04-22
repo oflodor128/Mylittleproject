@@ -1,0 +1,111 @@
+<body>
+    <div class="container">
+
+
+
+
+        <header>
+
+            <h1>Templete de captura de evidencias({{incompleteCount}})</h1>
+
+
+
+            <label class="hide-completed">
+
+                <input type="checkbox" />
+
+                Hide Completed Tasks
+
+            </label>
+            
+
+            {{> loginButtons}}
+
+            {{#if currentUser}}
+            <form class="new-task">                 
+                <label class="Fotos"><strong>Foto de la hoja del dibujo</strong><input type="text" name="text" placeholder="Agrega la tarea"/>                
+            </label>
+            </form>
+            
+            <form class="new-task1">
+                    <label class="Fotos"><strong>Foto del cableado</strong><input input type="file" accept="image/*" capture="camera"/>                
+                    </label>
+                </form>
+                <form class="new-task2">
+                        <label class="Fotos"><strong>Foto de la prueba de Hypot</strong><input input type="file" accept="image/*" capture="camera"/>                
+                        </label>
+                    </form>
+                    <form class="new-task3">
+                            <label class="Fotos"><strong>Foto de las balastras o drivers</strong><input input type="file" accept="image/*" capture="camera"/>                
+                            </label>
+                        </form>
+                        <form class="new-task4">
+                                <label class="Fotos"><strong>Foto de ls etiquetas de la lampara</strong><input type="file" accept="image/*" capture="camera"/>                
+                                </label>
+                            </form>
+                            <form class="new-task5">
+                                    <label class="Fotos"><strong>Foto de los conectores</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                    </label>
+                                </form>
+                                <form class="new-task6">
+                                        <label class="Fotos"><strong>Fotos de los jointers, brackets, etc.</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                        </label>
+                                    </form>
+                                    <form class="new-task7">
+                                            <label class="Fotos"><strong>Foto de todo el hardware</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                            </label>
+                                        </form>
+                                        <form class="new-task8">
+                                                <label class="Fotos"><strong>Foto de la lampara prendida</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                </label>
+                                            </form>
+                                            <form class="new-task9">
+                                                    <label class="Fotos"><strong>Video del funcionamiento del dimming</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                    </label>
+                                                </form>
+                                                <form class="new-task10">
+                                                        <label class="Fotos"><strong>Foto de la continudad de tierra</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                        </label>
+                                                    </form>
+                                                    <form class="new-task11">
+                                                            <label class="Fotos"><strong>Prueba del cable gripper</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                            </label>
+                                                        </form>
+                                                        <form class="new-task12">
+                                                                <label class="Fotos"><strong>Foto de las medidas</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                                </label>
+                                                            </form>
+                                                            <form class="new-task13">
+                                                                    <label class="Fotos"><strong>Foto de los difusores</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                                    </label>
+                                                                </form>
+                                                                <form class="new-task14">
+                                                                        <label class="Fotos"><strong>Foto del contenido de la caja al momento de empaque</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                                        </label>
+                                                                    </form>
+                                                                    <form class="new-task15">
+                                                                            <label class="Fotos"><strong>Foto de las etiquetas de la caja</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                                            </label>
+                                                                        </form>
+                                                                        <form class="new-task16">
+                                                                                <label class="Fotos"><strong>Fotos del pallet</strong><input input type="file" accept="image/*" capture="camera"/>                
+                                                                                </label>
+                                                                            </form>
+                                                                           
+
+                <form name="changeimage">
+                    <label class="Fotos">Foto de la pureba del Hypot</label>
+                        
+                </form>
+{{/if}}
+
+        </header>
+
+        <ul>
+
+            {{#each tasks}}
+            {{> task}}
+            {{/ each}}
+        </ul>
+    </div>
+</body>
