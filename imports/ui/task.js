@@ -12,10 +12,10 @@ Template.task.helpers({
 Template.task.events({
     'click .toggle-checked'() {
         Meteor.call('tasks.setChecked', this_id, !this.checked);
-    },
+    }, //Eliminar archivo
     'click .delete'() {
         Meteor.call('tasks.remove', this._id);
-    },
+    },//insertarlo como privado
     'click .toggle-private'() {
         Meteor.call('tasks.setPrivate', this._id, !this.private);
     },
