@@ -33,7 +33,7 @@ Template.body.helpers({
 
         if (instance.state.get('hideCompleted')) {
 
-            // If hide completed is checked, filter tasks
+            
 
             return Tasks.find({ checked: { $ne: true } }, { sort: { createdAt: -1 } });
 
@@ -69,17 +69,17 @@ Template.body.events({
         console.log(event);
 
         const target = event.target;
-        const text = target.text.value;
+        const file = target.file.value;
 
         Tasks.insert({
-            text,
+            file,
             createdAt: new Date(),
         });
 
-        Meteor.call('tasks.insert', text);
+        Meteor.call('tasks.insert', file);
 
         //clear form
-        target.text.value = '';
+        target.file.value = '';
     },
 
         'submit .new-task1'(event) {
@@ -87,17 +87,17 @@ Template.body.events({
             console.log(event);
     
             const target = event.target;
-            const text = target.text.value;
+            const file = target.file.value;
     
             Tasks.insert({
-                text,
+                file,
                 createdAt: new Date(),
             });
     
-            Meteor.call('tasks.insert', text);
+            Meteor.call('tasks.insert', file);
     
             //clear form
-            target.text.value = '';
+            target.file.value = '';
 
     },
 
@@ -106,17 +106,17 @@ Template.body.events({
         console.log(event);
 
         const target = event.target;
-        const text = target.text.value;
+        const file = target.file.value;
 
         Tasks.insert({
-            text,
+            file,
             createdAt: new Date(),
         });
 
-        Meteor.call('tasks.insert', text);
+        Meteor.call('tasks.insert', file);
 
         //clear form
-        target.text.value = '';
+        target.file.value = '';
 
 },
 
@@ -125,17 +125,17 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const file = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
 
 },
 
@@ -144,17 +144,17 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const file = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
 
 },
 
@@ -163,17 +163,17 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
 
 },
 
@@ -182,17 +182,24 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+},
+
+    Meteor.call('tasks.insert', file);
+
+    //clear form
+    target.file.value = '';
 
 },
 
@@ -201,17 +208,18 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
 
 },
 
@@ -220,17 +228,19 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
 
@@ -239,17 +249,19 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
 
@@ -258,17 +270,19 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
 
@@ -277,55 +291,63 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
+
 
 'submit .new-task12'(event) {
     event.preventDefault();
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
+
 
 'submit .new-task13'(event) {
     event.preventDefault();
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
 
@@ -334,17 +356,19 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
 
@@ -353,19 +377,22 @@ Template.body.events({
     console.log(event);
 
     const target = event.target;
-    const text = target.text.value;
+    const text = target.file.value;
 
     Tasks.insert({
-        text,
+        file,
         createdAt: new Date(),
     });
 
-    Meteor.call('tasks.insert', text);
+    Meteor.call('tasks.insert', file);
 
     //clear form
-    target.text.value = '';
+    target.file.value = '';
+
+
 
 },
+
 
 'submit .new-task16'(event) {
     event.preventDefault();
